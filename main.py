@@ -1,11 +1,6 @@
-from pathlib import Path
+import pathlib
 
-ENTRY = "The fire alarm went off and my cat sprinted to the exit, then turned around, went back to his food bowl, and left the fire to me."
+ENTRY = "My cat sat on my phone and emailed my resignation to my boss — he accepted it before I even woke up."
+OUTPUT = pathlib.Path("/output/entry.txt")
 
-
-def main():
-    Path("/output/entry.txt").write_text(ENTRY, encoding="utf-8")
-
-
-if __name__ == "__main__":
-    main()
+OUTPUT.write_text(ENTRY, encoding="utf-8")
